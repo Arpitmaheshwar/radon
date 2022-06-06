@@ -4,10 +4,11 @@ const userSchema = new mongoose.Schema( {
     bookName: String,
     authorName: String,
     year:String,
-    // category: {
-    //     type: String,
-    //     enum: ["histrory","economics","biography"] //"falana" will give an error
-    // },
+    category: {
+        type: String,
+        enum: ["history","economics","biography"] //"falana" will give an error
+    },
+
     
 }, { timestamps: true });
 
