@@ -35,7 +35,8 @@ const getbyname1 = async function(req,res){
 
 const costbook = async function(req,res){
 
-    let Allbook = await BookModel.find({price:{$gte:50,$lte:100}}).select(author_name)
+    let Allbook = await BookModel.find({price:{$gte:50,$lte:100}}).select({author_id:1})
+    let books1 = await AuthorModel.find()
 }
 
 module.exports.createBooks = createBooks
