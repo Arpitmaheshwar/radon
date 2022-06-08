@@ -35,7 +35,26 @@ const getbyname1 = async function(req,res){
 
 const costbook = async function(req,res){
 
-    let Allbook = await BookModel.find({price:{$gte:50,$lte:100}}).select({author_id:1})
+    let Allbook = await BookModel.find({price:{$gte:50,$lte:100}}).select({author_id:1,_id:0})
+    console.log(Allbook)
+
+    let arr1 = Allbook.map((ele)=>ele.author_id)
+    console.log(arr1)
+    let authorName = await AuthorModel.find({author_id:{$in:arr1}}).select({author_name:1,_id:0})
+    console.log(authorName)
+    res.send({msg:authorName})
+
+    // let arr = []
+    // for(let i of Allbook){
+    //     console.log(i)
+    //     let authorName = await AuthorModel.find({author_id:i.author_id}).select({author_name:1,_id:0})
+    //     console.log(authorName)
+    //     arr.push(authorName)
+
+    // }
+    // res.send({msg:arr})
+
+    
     let books1 = await AuthorModel.find()
 }
 
