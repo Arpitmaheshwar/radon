@@ -19,6 +19,11 @@ const userSchema = new mongoose.Schema( {
         type:Boolean,
         default:false
     },
+    posts: {
+        type:[],
+        default:[]
+    }
+
 }, { timestamps: true });
 
 module.exports = mongoose.model('NayaUser', userSchema)
