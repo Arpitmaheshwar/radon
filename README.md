@@ -46,3 +46,10 @@ Create API's to do each of the following:
                     "url": "https://i.imgflip.com/5mvxax.jpg",
                     "page_url": "https://imgflip.com/i/5mvxax"
                 }
+
+
+https://apisetu.gov.in/api/cowin#/Appointment%20Availability%20APIs/findByDistrict
+
+
+
+https://cdn-api.co-vin.in/api - Production Server
